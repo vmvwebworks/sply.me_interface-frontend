@@ -1,15 +1,6 @@
 <template>
   <v-app class="main">
-    <v-navigation-drawer
-      class="side header"
-      persistent
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      v-model="drawer"
-      enable-resize-watcher
-      fixed
-      app
-    >
+    <v-navigation-drawer class="side header" flat :clipped="clipped" :inset="inset" v-model="drawer" enable-resize-watcher fixed app>
       <v-list class="side">
         <v-list-tile
           value="true"
@@ -29,17 +20,12 @@
       class="header"
       app
       flat
+      tabs
       :clipped-left="clipped"
+      clipped
     >
-      <v-toolbar-side-icon @click.stop="drawer = !drawer"></v-toolbar-side-icon>
-      <v-btn icon @click.stop="miniVariant = !miniVariant">
-        <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="clipped = !clipped">
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn icon @click.stop="fixed = !fixed">
-        <v-icon>remove</v-icon>
+      <v-btn icon  @click.stop="drawer = !drawer">
+        <v-icon >menu</v-icon>
       </v-btn>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-toolbar-title v-text="slogan"></v-toolbar-title>
@@ -67,8 +53,10 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer :fixed="fixed" app>
-      <span>&copy; 2018</span>
+    <v-footer class="footer"
+      inset
+      height="120px"
+      >
     </v-footer>
   </v-app>
 </template>
@@ -77,14 +65,15 @@
 export default {
   data () {
     return {
-      clipped: false,
-      drawer: true,
+      inset: true,
+      clipped: true,
+      flat: true,
+      drawer: false,
       fixed: false,
       items: [{
         icon: 'bubble_chart',
         title: 'Inspire'
       }],
-      miniVariant: false,
       right: true,
       rightDrawer: false,
       title: 'Sply.me',

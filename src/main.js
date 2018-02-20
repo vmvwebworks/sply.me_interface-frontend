@@ -38,7 +38,8 @@ Vue.use(Vuetify, {
     success: '#4CAF50',
     warning: '#FFC107',
     main: '#1e272e',
-    header: '#00d8d6',
+    header: '#57606f',
+    footer: '#2f3542',
     side: '#485460'
   }
 })
