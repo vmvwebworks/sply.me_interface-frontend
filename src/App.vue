@@ -1,6 +1,13 @@
 <template>
   <v-app class="main">
-    <v-navigation-drawer class="side header" flat :clipped="clipped" :inset="inset" v-model="drawer" enable-resize-watcher fixed app>
+    <v-navigation-drawer
+      class="side header" 
+      flat
+      clipped 
+      v-model="drawer" 
+      enable-resize-watcher 
+      fixed 
+      app>
       <v-list class="side">
         <v-list-tile
           value="true"
@@ -17,10 +24,10 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
+      fixed
       class="header"
       app
       flat
-      tabs
       :clipped-left="clipped"
       clipped
     >
@@ -29,6 +36,14 @@
       </v-btn>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-toolbar-title v-text="slogan"></v-toolbar-title>
+      <v-text-field
+          prepend-icon="search"
+          append-icon="mic"
+          label="Search"
+          solo-inverted
+
+          flat
+        ></v-text-field>
       <v-spacer></v-spacer>
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>menu</v-icon>
@@ -53,8 +68,10 @@
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
-    <v-footer class="footer"
-      inset
+    <v-footer 
+      class="footer"
+      fixed
+      :inset="inset"
       height="120px"
       >
     </v-footer>
@@ -65,7 +82,7 @@
 export default {
   data () {
     return {
-      inset: true,
+      inset: false,
       clipped: true,
       flat: true,
       drawer: false,
