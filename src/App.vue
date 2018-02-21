@@ -41,7 +41,6 @@
           append-icon="mic"
           label="Search"
           solo-inverted
-
           flat
         ></v-text-field>
       <v-spacer></v-spacer>
@@ -53,20 +52,16 @@
       <router-view/>
     </v-content>
     <v-navigation-drawer
-      temporary
+      class="side header"
+      flat
+      clipped
+      enable-resize-watcher
       :right="right"
       v-model="rightDrawer"
       fixed
       app
     >
-      <v-list>
-        <v-list-tile @click="right = !right">
-          <v-list-tile-action>
-            <v-icon>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
+      
     </v-navigation-drawer>
     <v-footer 
       class="footer"
