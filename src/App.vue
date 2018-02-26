@@ -25,6 +25,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
+      height="120px"
       fixed
       class="header"
       app
@@ -32,19 +33,22 @@
       :clipped-left="clipped"
       clipped
     >
-      <v-btn icon  @click.stop="drawer = !drawer">
-        <v-icon >menu</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title"></v-toolbar-title>
-      <v-toolbar-title v-text="slogan"></v-toolbar-title>
-      <v-spacer></v-spacer>
-
-        <v-text-field prepend-icon="search" append-icon="mic" label="Search" solo-inverted flat ></v-text-field>
-
-      <v-spacer></v-spacer>
-      <v-btn icon @click.stop="rightDrawer = !rightDrawer">
-        <v-icon>menu</v-icon>
-      </v-btn>
+      <v-toolbar-items>
+        <v-btn block flat @click.stop="drawer = !drawer">
+          <v-icon large>menu</v-icon>
+        </v-btn>
+        <v-btn flat>
+        <img src="@/assets/dialog_medium.png" height="100%">
+        </v-btn>
+      </v-toolbar-items>
+      <v-spacer>
+        <v-text-field prepend-icon="search" size="12" solo-inverted flat full-width clearable placeholder="search"></v-text-field>
+      </v-spacer>
+      <v-toolbar-items>
+        <v-btn block flat @click.stop="rightDrawer = !rightDrawer">
+          <v-icon large>menu</v-icon>
+        </v-btn>
+      </v-toolbar-items>
 
     </v-toolbar>
 
