@@ -1,12 +1,12 @@
 <template>
   <v-app class="main">
     <v-navigation-drawer
-      class="side header" 
+      class="side header"
       flat
-      clipped 
-      v-model="drawer" 
-      enable-resize-watcher 
-      fixed 
+      clipped
+      v-model="drawer"
+      enable-resize-watcher
+      fixed
       app>
       <v-list class="side">
         <v-list-tile
@@ -19,6 +19,7 @@
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title v-text="item.title"></v-list-tile-title>
+
           </v-list-tile-content>
         </v-list-tile>
       </v-list>
@@ -36,18 +37,17 @@
       </v-btn>
       <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-toolbar-title v-text="slogan"></v-toolbar-title>
-      <v-text-field
-          prepend-icon="search"
-          append-icon="mic"
-          label="Search"
-          solo-inverted
-          flat
-        ></v-text-field>
+      <v-spacer></v-spacer>
+
+        <v-text-field prepend-icon="search" append-icon="mic" label="Search" solo-inverted flat ></v-text-field>
+
       <v-spacer></v-spacer>
       <v-btn icon @click.stop="rightDrawer = !rightDrawer">
         <v-icon>menu</v-icon>
       </v-btn>
+
     </v-toolbar>
+
     <v-content>
       <router-view/>
     </v-content>
@@ -61,9 +61,9 @@
       fixed
       app
     >
-      
+
     </v-navigation-drawer>
-    <v-footer 
+    <v-footer
       class="footer"
       fixed
       :inset="inset"
@@ -89,7 +89,8 @@ export default {
       right: true,
       rightDrawer: false,
       title: 'Sply.me',
-      slogan: '¡Habla y toma mi dinero!'
+      slogan: '¡Habla y toma mi dinero!',
+
     }
   },
   name: 'App'
