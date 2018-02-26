@@ -8,9 +8,9 @@
           tabs>
         <v-tabs
           centered
-          color="cyan"
+          color="subHeader"
           slot="extension"
-          slider-color="yellow"
+          slider-color="selector"
           v-model="model"
         >
 
