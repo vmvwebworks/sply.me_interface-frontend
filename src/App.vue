@@ -25,7 +25,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      height="120px"
+      height="100px"
       fixed
       class="header"
       app
