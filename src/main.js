@@ -43,8 +43,8 @@ Vue.use(Vuetify, {
     warning: '#FFC107',
     main: '#1e272e',
     header: '#57606f',
-    subHeader: '#48393C',
-    selector: '#cf6a87',
+    subHeader: '#557780',
+    selector: '#E67E22',
     footer: '#2f3542',
     side: '#485460'
   }

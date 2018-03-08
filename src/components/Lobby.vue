@@ -1,19 +1,22 @@
 <template>
-  <v-container fluid>
-    <v-slide-y-transition mode="out-in">
-      <v-layout column align-center>
-        <blockquote>
-          &#8220;Las Rutas tiran. :D &#8221;
-          <footer>
-            <small>
-              <em>&mdash; Marcos R. Guevara</em>
-              <br>
-            </small>
-          </footer>
-        </blockquote>
-      </v-layout>
-    </v-slide-y-transition>
-  </v-container>
+  <div>
+    <v-toolbar class="subHeader">
+      <v-tabs centered v-model="tabs" slider-color="selector" color="transparent">
+        <v-tab v-for="n in 3" :key="n">
+          Item {{ n }}
+        </v-tab>
+      </v-tabs>
+    </v-toolbar>
+    <v-tabs-items v-model="tabs">
+      <v-tab-item v-for="n in 3" :key="n">
+        <v-card>
+          <v-card-text>
+            {{ text }}
+          </v-card-text>
+        </v-card>
+      </v-tab-item>
+    </v-tabs-items>
+  </div>
 </template>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -40,7 +43,7 @@ blockquote {
 export default {
   data () {
     return {
-      model: 'tab-2',
+      tabs: null,
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     }
   },
