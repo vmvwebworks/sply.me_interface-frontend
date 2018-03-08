@@ -3,10 +3,11 @@
     <v-slide-y-transition mode="out-in">
       <v-layout column align-center>
         <blockquote>
-          &#8220;Speak and take my money.&#8221;
+          &#8220;Las Rutas tiran. :D &#8221;
           <footer>
             <small>
-              <em>&mdash;Philip J.Fray</em>
+              <em>&mdash; Marcos R. Guevara</em>
+              <br>
             </small>
           </footer>
         </blockquote>

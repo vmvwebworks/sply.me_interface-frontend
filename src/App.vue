@@ -92,8 +92,7 @@ export default {
       }],
       right: true,
       rightDrawer: false,
-      title: 'Sply.me',
-      slogan: '¡Habla y toma mi dinero!',
+      title: 'Sply.me'
 
     }
   },
