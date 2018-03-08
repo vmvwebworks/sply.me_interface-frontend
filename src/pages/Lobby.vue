@@ -12,24 +12,24 @@
     </v-toolbar>
     <v-container fluid>
       <v-tabs-items v-model="tabs">
-        <v-tab-item v-for="n in 2" :key="n">
-          <v-card>
-            <v-card-text>
-              {{ text }}
-            </v-card-text>
-          </v-card>
+        <v-tab-item >
+          <userslist></userslist>
         </v-tab-item>
       </v-tabs-items>
     </v-container>
   </div>
 </template>
 <script>
+import UsersList from '../components/UsersList.vue'
 export default {
   data () {
     return {
       tabs: null,
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     }
+  },
+  components:{
+    userslist: UsersList
   },
   name: 'App'
 }
