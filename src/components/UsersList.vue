@@ -2,7 +2,7 @@
   <v-data-table
     :headers="headers"
     :items="items"
-    hide-actions
+    :search="search"
     expand
     class="elevation-1"
   >
@@ -12,6 +12,9 @@
       <td class="display-1 info--text text-xs-center">{{ props.item.region }}</td>
       <td class="display-1 info--text text-xs-center">{{ props.item.price }}</td>
       <td class="display-1 info--text text-xs-center">{{ props.item.available }}</td>
+    </template>
+    <template slot="footer" class="main">
+      
     </template>
   </v-data-table>
 </template>
@@ -53,7 +56,7 @@ export default {
       ],
       items: [
         {
-          value: false,
+
           username: 'xac',
           language: 'english',
           region: 'England',
@@ -61,7 +64,7 @@ export default {
           available: true
         },
         {
-          value: false,
+
           username: 'raian',
           language: 'english',
           region: 'England',
@@ -69,7 +72,7 @@ export default {
           available: true
         },
         {
-          value: false,
+
           username: 'maiquel',
           language: 'english',
           region: 'England',
@@ -77,7 +80,7 @@ export default {
           available: false
         },
         {
-          value: false,
+
           username: 'estiven',
           language: 'english',
           region: 'England',
