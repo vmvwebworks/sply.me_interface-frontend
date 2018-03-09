@@ -3,15 +3,15 @@
     :headers="headers"
     :items="items"
     hide-actions
+    expand
     class="elevation-1"
   >
     <template slot="items" slot-scope="props">
-      <td class="display-2 info--text">{{ props.item.name }}</td>
-      <td class="display-2" >{{ props.item.calories }}</td>
-      <td class="text-xs-right">{{ props.item.fat }}</td>
-      <td class="text-xs-right">{{ props.item.carbs }}</td>
-      <td class="text-xs-right">{{ props.item.protein }}</td>
-      <td class="text-xs-right">{{ props.item.iron }}</td>
+      <td class="display-1 info--text text-xs-center">{{ props.item.username }}</td>
+      <td class="display-1 info--text text-xs-center" >{{ props.item.language }}</td>
+      <td class="display-1 info--text text-xs-center">{{ props.item.region }}</td>
+      <td class="display-1 info--text text-xs-center">{{ props.item.price }}</td>
+      <td class="display-1 info--text text-xs-center">{{ props.item.available }}</td>
     </template>
   </v-data-table>
 </template>
@@ -23,43 +23,66 @@ export default {
       headers: [
         {
           text: 'Username',
-          align: 'left',
+          align: 'center',
           sortable: true,
-          value: 'name'
+          value: 'username'
         },
-        { text: 'Calories', value: 'calories' },
-        { text: 'Fat (g)', value: 'fat' },
-        { text: 'Carbs (g)', value: 'carbs' },
-        { text: 'Protein (g)', value: 'protein' },
-        { text: 'Iron (%)', value: 'iron' }
+        {
+          text: 'Language',
+          align: 'center',
+          sortable: true,
+          value: 'language'
+        },
+        {
+          text: 'Region',
+          align: 'center',
+          sortable: true,
+          value: 'region'
+        },
+        { text: 'Price',
+          align: 'center',
+          sortable: true,
+          value: 'price'
+        },
+        {
+          text: 'Available',
+          align: 'center',
+          sortable: true,
+          value: 'available'
+        }
       ],
       items: [
         {
           value: false,
-          name: 'Frozen Yogurt',
-          calories: 159,
-          fat: 6.0,
-          carbs: 24,
-          protein: 4.0,
-          iron: '1%'
+          username: 'xac',
+          language: 'english',
+          region: 'England',
+          price: 24,
+          available: true
         },
         {
           value: false,
-          name: 'Ice cream sandwich',
-          calories: 237,
-          fat: 9.0,
-          carbs: 37,
-          protein: 4.3,
-          iron: '1%'
+          username: 'raian',
+          language: 'english',
+          region: 'England',
+          price: 36,
+          available: true
         },
         {
           value: false,
-          name: 'Eclair',
-          calories: 262,
-          fat: 16.0,
-          carbs: 23,
-          protein: 6.0,
-          iron: '7%'
+          username: 'maiquel',
+          language: 'english',
+          region: 'England',
+          price: 16,
+          available: false
+        },
+        {
+          value: false,
+          username: 'estiven',
+          language: 'english',
+          region: 'England',
+          price: 22,
+          available: true
         }
       ]
     }
