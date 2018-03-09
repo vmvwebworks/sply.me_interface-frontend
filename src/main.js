@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
 import {
   Vuetify,
   VApp,
@@ -18,8 +19,7 @@ import {
   VTabs,
   transitions
 } from 'vuetify'
-import '../node_modules/vuetify/src/stylus/app.styl'
-
+import './assets/style/main.styl'
 Vue.use(Vuetify, {
   components: {
     VApp,
@@ -40,7 +40,7 @@ Vue.use(Vuetify, {
     secondary: '#2C3A47',
     accent: '#82B1FF',
     error: '#FF5252',
-    info: '#2196F3',
+    info: '#E4E4E4',
     success: '#4CAF50',
     warning: '#FFC107',
     main: '#1e272e',

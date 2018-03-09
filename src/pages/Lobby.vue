@@ -10,13 +10,13 @@
         </v-tab>
       </v-tabs>
     </v-toolbar>
-    <v-container fluid>
-      <v-tabs-items v-model="tabs">
-        <v-tab-item >
-          <userslist></userslist>
-        </v-tab-item>
-      </v-tabs-items>
-    </v-container>
+
+    <v-tabs-items v-model="tabs">
+      <v-tab-item >
+        <userslist></userslist>
+      </v-tab-item>
+    </v-tabs-items>
+
   </div>
 </template>
 <script>
@@ -28,7 +28,7 @@ export default {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
     }
   },
-  components:{
+  components: {
     userslist: UsersList
   },
   name: 'App'
