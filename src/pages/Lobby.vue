@@ -1,7 +1,7 @@
 <template>
   <div>
-    <v-toolbar class="subHeader">
-      <v-tabs centered v-model="tabs" slider-color="selector" color="transparent">
+    <v-toolbar flat class="subHeader">
+      <v-tabs grow icons-and-text centered v-model="tabs" slider-color="selector" color="transparent">
         <v-tab>
           <v-icon x-large>map</v-icon> Region
         </v-tab>
@@ -12,6 +12,8 @@
     </v-toolbar>
 
     <v-tabs-items v-model="tabs">
+      <v-tab-item >
+      </v-tab-item>
       <v-tab-item >
         <userslist></userslist>
       </v-tab-item>
