@@ -99,6 +99,22 @@ export default {
         },
         {
 
+          username: 'Güiliam',
+          language: 'english',
+          region: 'England',
+          price: 30,
+          available: false
+        },
+        {
+
+          username: 'maiquel',
+          language: 'english',
+          region: 'England',
+          price: 16,
+          available: false
+        },
+        {
+
           username: 'estiven',
           language: 'english',
           region: 'England',

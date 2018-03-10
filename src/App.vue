@@ -52,7 +52,7 @@
 
     </v-toolbar>
 
-    <v-content>
+    <v-content fluid wrap>
       <router-view/>
     </v-content>
     <v-navigation-drawer
@@ -69,7 +69,7 @@
     </v-navigation-drawer>
     <v-footer
       class="footer"
-      fixed
+
       :inset="inset"
       height="120px"
       >
