@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-
+import * as VueGoogleMaps from 'vue2-google-maps'
 import {
   Vuetify,
   VApp,
@@ -49,6 +49,16 @@ Vue.use(Vuetify, {
     selector: '#E67E22',
     footer: '#2f3542',
     side: '#485460'
+  }
+})
+require('dotenv').config()
+Vue.use(VueGoogleMaps, {
+  load: {
+    key: process.env.G_MAPS_KEY,
+    libraries: 'places' // This is required if you use the Autocomplete plugin
+    // OR: libraries: 'places,drawing'
+    // OR: libraries: 'places,drawing,visualization'
+    // (as you require)
   }
 })
 

@@ -2,7 +2,6 @@
   <v-data-table
     :headers="headers"
     :items="items"
-    :search="search"
     expand
     class="elevation-1"
   >

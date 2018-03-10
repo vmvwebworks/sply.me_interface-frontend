@@ -14,8 +14,11 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "dotenv": "^5.0.1",
+    "dotenv-webpack": "^1.5.5",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
+    "vue2-google-maps": "^0.8.11",
     "vuetify": "^1.0.0"
   },
   "devDependencies": {

@@ -13,6 +13,8 @@
 
     <v-tabs-items v-model="tabs">
       <v-tab-item >
+        <mapResume>
+        </mapResume>
       </v-tab-item>
       <v-tab-item >
         <userslist></userslist>
@@ -23,6 +25,7 @@
 </template>
 <script>
 import UsersList from '../components/UsersList.vue'
+import MapResume from '../components/MapResume.vue'
 export default {
   data () {
     return {
@@ -31,7 +34,8 @@ export default {
     }
   },
   components: {
-    userslist: UsersList
+    userslist: UsersList,
+    mapResume: MapResume
   },
   name: 'App'
 }
