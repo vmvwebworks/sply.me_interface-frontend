@@ -12,9 +12,14 @@
       <td class="display-1 info--text text-xs-center">{{ props.item.region }}</td>
       <td class="display-1 info--text text-xs-center">{{ props.item.price }}</td>
       <td class="display-1 info--text text-xs-center">{{ props.item.available }}</td>
+      <td class="justify-center layout px-0">
+        <v-btn flat>
+        <img src="@/assets/chat.png" height="100%">
+        </v-btn>
+      </td>
     </template>
     <template slot="footer" class="main">
-      
+
     </template>
   </v-data-table>
 </template>
@@ -52,6 +57,11 @@ export default {
           align: 'center',
           sortable: true,
           value: 'available'
+        },
+        {
+          text: 'request',
+          align: 'center',
+          value: 'request'
         }
       ],
       items: [
@@ -70,6 +80,14 @@ export default {
           region: 'England',
           price: 36,
           available: true
+        },
+        {
+
+          username: 'Güiliam',
+          language: 'english',
+          region: 'England',
+          price: 30,
+          available: false
         },
         {
 
