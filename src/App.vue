@@ -32,8 +32,9 @@
       class="header"
       app
       flat
-      :clipped-left="clipped"
-      clipped
+      clipped-left
+      clipped-right
+
     >
       <v-toolbar-items>
         <v-btn block flat @click.stop="drawer = !drawer">
