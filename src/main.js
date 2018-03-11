@@ -55,6 +55,9 @@ Vue.use(Vuetify, {
 require('dotenv').config()
 Vue.use(VueChartkick, { Chartkick })
 window.Chartkick = Chartkick
+Chartkick.options = {
+  colors: ['#EB6361', '#EE543A']
+}
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
