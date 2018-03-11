@@ -4,6 +4,7 @@
     :items="items"
     expand
     class="elevation-1"
+    :rows-per-page-items="perPageItems"
   >
     <template slot="items" slot-scope="props">
       <td class="display-1 info--text text-xs-center">{{ props.item.username }}</td>
@@ -27,6 +28,7 @@
 export default {
   data () {
     return {
+      perPageItems: [25,50,100,{"text":"All","value":-1}],
       headers: [
         {
           text: 'Username',
