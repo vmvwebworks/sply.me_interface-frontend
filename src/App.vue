@@ -69,33 +69,33 @@
       app
     >
     <v-flex >
-
-        <v-toolbar color="secondary" flat>
-          <v-toolbar-items>
-            <v-text-field prepend-icon="search" solo-inverted flat full-width clearable placeholder="search"></v-text-field>
-          </v-toolbar-items>
-        </v-toolbar>
-        <v-list two-line>
-          <v-subheader>
-            Following
-          </v-subheader>
-          <v-list-tile avatar v-for="item in items2" :key="item.text" @click="">
-            <v-list-tile-action>
-              <v-icon v-if="item.icon">star</v-icon>
-            </v-list-tile-action>
-            <v-list-tile-content>
-              <v-list-tile-title v-text="item.text"></v-list-tile-title>
-            </v-list-tile-content>
-            <v-list-tile-avatar>
-              <img :src="`https://randomuser.me/api/portraits/men/${item.avatar}.jpg`" alt="">
-            </v-list-tile-avatar>
-          </v-list-tile>
-        </v-list>
+      <v-toolbar color="secondary" flat>
+        <v-toolbar-items>
+          <v-text-field prepend-icon="search" solo-inverted flat full-width clearable placeholder="search"></v-text-field>
+        </v-toolbar-items>
+      </v-toolbar>
+      <v-list two-line>
+        <v-subheader>
+          Following
+        </v-subheader>
+        <v-list-tile avatar v-for="item in items2" :key="item.text" @click="">
+          <v-list-tile-action>
+            <v-icon v-if="item.icon">star</v-icon>
+          </v-list-tile-action>
+          <v-list-tile-content>
+            <v-list-tile-title v-text="item.text"></v-list-tile-title>
+          </v-list-tile-content>
+          <v-list-tile-avatar>
+            <img :src="`https://randomuser.me/api/portraits/men/${item.avatar}.jpg`" alt="">
+          </v-list-tile-avatar>
+        </v-list-tile>
+      </v-list>
     </v-flex>
     </v-navigation-drawer>
     <v-footer
       class="footer"
       :inset="inset"
+      fixed
       height="120px"
       >
     </v-footer>
