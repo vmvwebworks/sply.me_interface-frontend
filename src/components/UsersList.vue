@@ -28,7 +28,7 @@
 export default {
   data () {
     return {
-      perPageItems: [25,50,100,{"text":"All","value":-1}],
+      perPageItems: [25, 50, 100, {'text': 'All', 'value': -1}],
       headers: [
         {
           text: 'Username',
