@@ -14,9 +14,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "chart.js": "^2.7.2",
+    "chartkick": "^2.3.3",
     "dotenv": "^5.0.1",
     "dotenv-webpack": "^1.5.5",
     "vue": "^2.5.2",
+    "vue-chartkick": "^0.2.1",
     "vue-router": "^3.0.1",
     "vue2-google-maps": "^0.8.11",
     "vuetify": "^1.0.0"

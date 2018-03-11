@@ -3,7 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import * as VueGoogleMaps from 'vue2-google-maps'
+import Chartkick from 'chartkick'
+import VueChartkick from 'vue-chartkick'
 import {
   Vuetify,
   VApp,
@@ -52,16 +53,8 @@ Vue.use(Vuetify, {
   }
 })
 require('dotenv').config()
-Vue.use(VueGoogleMaps, {
-  load: {
-    key: process.env.G_MAPS_KEY,
-    libraries: 'places' // This is required if you use the Autocomplete plugin
-    // OR: libraries: 'places,drawing'
-    // OR: libraries: 'places,drawing,visualization'
-    // (as you require)
-  }
-})
-
+Vue.use(VueChartkick, { Chartkick })
+window.Chartkick = Chartkick
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
