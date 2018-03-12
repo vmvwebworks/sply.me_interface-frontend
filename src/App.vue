@@ -58,23 +58,22 @@
     <v-content fluid wrap>
       <router-view/>
     </v-content>
-    <v-navigation-drawer
+    <v-navigation-drawer style="overflow: scroll; max-height: 480px;"
       class="side header"
       flat
       clipped
-      enable-resize-watcher
       :right="right"
       v-model="rightDrawer"
-      fixed
+
       app
     >
-    <v-flex >
+    <v-flex>
       <v-toolbar color="secondary" flat>
         <v-toolbar-items>
           <v-text-field prepend-icon="search" solo-inverted flat full-width clearable placeholder="search"></v-text-field>
         </v-toolbar-items>
       </v-toolbar>
-      <v-list two-line>
+      <v-list two-line >
         <v-subheader>
           Following
         </v-subheader>
@@ -129,7 +128,9 @@ export default {
           { icon: false, text: 'Jason Oner', avatar: 78 },
           { text: 'Travis Howard', avatar: 28 },
           { text: 'Ali Connors', avatar: 38 },
-          { text: 'Cindy Baker', avatar: 48 }
+          { text: 'Cindy Baker', avatar: 48 },
+          { text: 'wei xanler', avatar: 68 },
+          { text: 'gari esneider', avatar: 57 }
       ],
       right: true,
       rightDrawer: false,
