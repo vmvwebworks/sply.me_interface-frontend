@@ -24,19 +24,19 @@
   </div>
 </template>
 <script>
-import UsersList from '../components/UsersList.vue'
-import MapResume from '../components/MapResume.vue'
-export default {
-  data () {
-    return {
-      tabs: null,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-    }
-  },
-  components: {
-    userslist: UsersList,
-    mapResume: MapResume
-  },
-  name: 'App'
-}
+  import UsersList from '../components/UsersList.vue'
+  import MapResume from '../components/MapResume.vue'
+  export default {
+    data () {
+      return {
+        tabs: null,
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+      }
+    },
+    components: {
+      userslist: UsersList,
+      mapResume: MapResume
+    },
+    name: 'App'
+  }
 </script>

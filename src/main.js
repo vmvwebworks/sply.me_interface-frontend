@@ -8,14 +8,20 @@ import VueChartkick from 'vue-chartkick'
 import {
   Vuetify,
   VApp,
+  VAvatar,
+  VCard,
   VDataTable,
+  VDialog,
   VNavigationDrawer,
   VFooter,
   VList,
   VBtn,
   VIcon,
   VGrid,
+  VSelect,
+  VStepper,
   VSubheader,
+  VRadioGroup,
   VToolbar,
   VTextField,
   VTabs,
@@ -25,22 +31,29 @@ import './assets/style/main.styl'
 Vue.use(Vuetify, {
   components: {
     VApp,
+    VAvatar,
+    VCard,
     VDataTable,
+    VDialog,
     VNavigationDrawer,
     VFooter,
     VList,
     VBtn,
     VIcon,
     VGrid,
+    VSelect,
+    VStepper,
     VSubheader,
+    VRadioGroup,
     VToolbar,
     VTextField,
     VTabs,
     transitions
   },
   theme: {
-    primary: '#EDEBED',
+    primary: '#D4D2D4',
     secondary: '#2C3A47',
+    thirdy: '#F1654C',
     accent: '#82B1FF',
     error: '#FF5252',
     info: '#282830',
@@ -52,6 +65,7 @@ Vue.use(Vuetify, {
     selector: '#E67E22',
     footer: '#2f3542',
     side: '#485460'
+
   }
 })
 require('dotenv').config()
