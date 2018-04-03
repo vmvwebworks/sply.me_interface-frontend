@@ -46,7 +46,7 @@
                       <td>{{ props.item.username }}</td>
                       <td class="justify-center layout px-0">
                         <v-btn icon class="mx-0">
-                          <v-icon color="teal">edit</v-icon>
+                          <v-icon color="teal">forward</v-icon>
                         </v-btn>
                       </td>
                     </template>
@@ -56,8 +56,15 @@
                 <v-btn flat>Cancel</v-btn>
               </v-stepper-content>
               <v-stepper-content step="3">
-                <v-card></v-card>
-                <v-btn @click.native="e1 = 1">Continue</v-btn>
+                <v-card>
+                  <v-alert type="success" :value="true" class="title">
+                     El importe del servicio serán CANTIDAD €.
+                  </v-alert>
+                  <p class="subheading"> Recuerda que tanto para pagar como cobrar los trámites pendientes se realiza desde la sección de pagos.</p>
+                  <p class="caption">Se ruega el buen uso de la plataforma. El pago a este usuario debe realizarse en un término no superior a tres días, pasado el plazo, el otro usuario podría emprender reclamaciones. El no cumplimiento de los pagos puede dar lugar a sanciones, llegando incluso a la suspensión de la cuenta incluyendo bloqueo a la cuenta de paypal asociada.</p>
+                  <p class="caption">Avisamos también de que las conversaciones siempre son grabadas y son almacenadas un tiempo máximo de 7 días siempre y cuando no exista una reclamación. Esto sirve tanto para garantizar una buena experiencia para los usuarios como para su seguridad.</p>
+                </v-card>
+                <v-btn @click.native="e1 = 1">¡Dale!</v-btn>
                 <v-btn flat>Cancel</v-btn>
               </v-stepper-content>
             </v-stepper-items>

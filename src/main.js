@@ -8,6 +8,7 @@ import VueChartkick from 'vue-chartkick'
 import {
   Vuetify,
   VApp,
+  VAlert,
   VAvatar,
   VCard,
   VDataTable,
@@ -31,6 +32,7 @@ import './assets/style/main.styl'
 Vue.use(Vuetify, {
   components: {
     VApp,
+    VAlert,
     VAvatar,
     VCard,
     VDataTable,
